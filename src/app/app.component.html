@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container color="primary">
+  <mat-sidenav #sidenav>
+    <app-sidenav (closeSideNavigation)="sidenav.close()"></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (SideNavigationToggle)="sidenav.toggle()"></app-header>
+    <app-navtabs></app-navtabs>
+  </mat-sidenav-content>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
